@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Rose Day – A Journey of Us</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap');
+*{margin:0;padding:0;box-sizing:border-box;} html{scroll-behavior:smooth;}
+body{
+ font-family:'Poppins',sans-serif;
+ background:linear-gradient(180deg,#ffe6f0,#ffd1e3,#ffb6c9);
+ color:#6b0f1a; overflow-x:hidden;
+}
+
+/* PETALS */
+.petal{position:fixed;top:-10px;width:22px;height:22px;pointer-events:none;animation:fall linear infinite;opacity:.8;z-index:1000;}
+@keyframes fall{0%{transform:translateY(0) rotate(0deg);opacity:.8;}100%{transform:translateY(110vh) rotate(360deg);opacity:0;}}
+
+/* HEARTBEAT */
+.heartbeat{position:fixed;bottom:-80px;right:-80px;width:300px;height:300px;
+background:url('https://cdn-icons-png.flaticon.com/512/833/833472.png') center/contain no-repeat;
+opacity:.15;animation:heartbeat 2s infinite;pointer-events:none;}
+@keyframes heartbeat{0%{transform:scale(1);}50%{transform:scale(1.15);}100%{transform:scale(1);}}
+
+section{padding:90px 8%;min-height:100vh;display:none;}
+section.active{display:flex;flex-direction:column;align-items:center;justify-content:center;}
+
+h1,h2{font-family:'Playfair Display',serif;} .center{text-align:center;}
+
+/* BUTTONS */
+.nav-btn{
+ margin:12px; padding:12px 30px; border:none; border-radius:35px;
+ background:linear-gradient(45deg,#ff4b7a,#ff1e56);
+ color:white; font-weight:600; cursor:pointer; box-shadow:0 8px 20px rgba(0,0,0,.25);
+ transition:.3s;}
+.nav-btn:hover{transform:scale(1.08);} 
+
+.box{max-width:900px;background:white;padding:30px;border-radius:30px;
+box-shadow:0 12px 30px rgba(0,0,0,.12);margin-top:30px;}
+
+.names{font-family:'Dancing Script',cursive;font-size:1.6rem;color:#ffe6f0;}
+
+/* PHOTO FRAME */
+.photo-frame{display:flex;gap:20px;flex-wrap:wrap;justify-content:center;margin-top:35px;}
+.photo-frame img{width:260px;height:260px;object-fit:cover;border-radius:25px;border:5px solid white;
+box-shadow:0 12px 28px rgba(0,0,0,.12);} 
+
+/* CODE-GENERATED ROSE GARDEN */
+#code-garden{position:relative;width:100%;height:420px;margin-top:30px;}
+.rose{position:absolute;bottom:0;width:50px;height:120px;}
+.stem{position:absolute;bottom:0;left:22px;width:6px;height:90px;background:#2f7d32;border-radius:3px;}
+.leaf{position:absolute;width:22px;height:12px;background:#2f7d32;border-radius:50% 0 50% 0;}
+.leaf.l1{left:10px;bottom:50px;transform:rotate(-20deg);} .leaf.l2{left:25px;bottom:65px;transform:rotate(20deg);} 
+.bloom{position:absolute;top:0;left:0;width:50px;height:50px;border-radius:50%;filter:drop-shadow(0 0 8px rgba(255,0,0,.4));}
+.red{background:radial-gradient(circle,#ff5f6d,#c1121f);} 
+.pink{background:radial-gradient(circle,#ff9acb,#ff1e56);} 
+.white{background:radial-gradient(circle,#ffffff,#ffd6e6);} 
+.yellow{background:radial-gradient(circle,#fff176,#f9a825);} 
+
+/* ROSE DAY BANNER */
+.rose-banner{font-size:1.1rem;font-style:italic;margin-top:10px;color:#8b0000;}
+
+footer{text-align:center;padding:25px;background:#d6336c;color:white;font-weight:600;}
+</style>
+</head>
+<body>
+<audio id="bg-music" autoplay loop>
+ <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mpeg">
+</audio>
+<div class="heartbeat"></div>
+<div id="petals"></div>
+
+<!-- PAGE 1 : WELCOME -->
+<section id="page1" class="active">
+<h1>Happy Rose Day, My Chiku 🌹</h1>
+<p class="center rose-banner">"A rose speaks of love silently, in a language known only to the heart."</p>
+<div class="box center">
+Today is not just another day — it is Rose Day, the day when every petal carries a promise, every fragrance carries a feeling, and every rose whispers love.
+<br><br>
+And for me, every rose in this world reminds me of you.
+</div>
+<div class="names">Chiku</div>
+<button class="nav-btn" onclick="showPage('page2')">Walk into Our Garden 🌷</button>
+</section>
+
+<!-- PAGE 2 : CODE ROSE GARDEN -->
+<section id="page2">
+<h2>Our Digital Rose Garden, Sweetu 🌹</h2>
+<p class="center">I didn’t just show you roses — I created a garden for you with code.</p>
+<div id="code-garden">
+  <!-- Red Rose -->
+  <div class="rose" style="left:10%">
+    <div class="stem"></div>
+    <div class="leaf l1"></div><div class="leaf l2"></div>
+    <div class="bloom red"></div>
+  </div>
+  <!-- Pink Rose -->
+  <div class="rose" style="left:30%">
+    <div class="stem"></div>
+    <div class="leaf l1"></div><div class="leaf l2"></div>
+    <div class="bloom pink"></div>
+  </div>
+  <!-- White Rose -->
+  <div class="rose" style="left:55%">
+    <div class="stem"></div>
+    <div class="leaf l1"></div><div class="leaf l2"></div>
+    <div class="bloom white"></div>
+  </div>
+  <!-- Yellow Rose -->
+  <div class="rose" style="left:75%">
+    <div class="stem"></div>
+    <div class="leaf l1"></div><div class="leaf l2"></div>
+    <div class="bloom yellow"></div>
+  </div>
+</div>
+<div class="box center">
+Red for my passion, Pink for my care, White for my purity of love, and Yellow for my happiness with you.
+</div>
+<button class="nav-btn" onclick="showPage('page3')">A Shayari for You 💕</button>
+</section>
+
+<!-- PAGE 3 : SHAYARI -->
+<section id="page3">
+<h2>For You, Sweetu 🌹</h2>
+<div class="box center">
+<strong>Hindi Shayari:</strong><br>
+"गुलाब तो सिर्फ नाम है मोहब्बत का,<br>मेरे लिए तो हर गुलाब तुम हो।" 🌹
+<br><br>
+"तेरी मुस्कान में ही मेरी दुनिया बसती है,<br>मेरी हर धड़कन सिर्फ तेरा नाम लेती है।" ❤️
+<br><br>
+<strong>English:</strong><br>
+"You are not just my love, you are my favorite reason to smile every single day." 💖
+</div>
+<button class="nav-btn" onclick="showPage('page4')">See Our Memories 📸</button>
+</section>
+
+<!-- PAGE 4 : PHOTOS -->
+<section id="page4">
+<h2>Beautiful Memories, Charu 📸</h2>
+<p class="center">(Replace these with your real photos with her)</p>
+<div class="photo-frame">
+<img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=600&q=80" />
+<img src="https://images.unsplash.com/photo-1504198458649-3128b932f49b?auto=format&fit=crop&w=600&q=80" />
+<img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=600&q=80" />
+</div>
+<button class="nav-btn" onclick="showPage('page5')">Read My Heart 💌</button>
+</section>
+
+<!-- PAGE 5 : LOVE LETTER -->
+<section id="page5">
+<h2>Love Letter for My Sweetheart 💌</h2>
+<div class="box">
+<strong>My Dearest Sweetheart,</strong><br><br>
+On this Rose Day, I realized something beautiful — just like a rose, love is delicate, deep, and priceless. You are my favorite person, my safest place, and my most beautiful feeling.
+<br><br>
+Every time I see a rose, I think of your smile. Every time I smell its fragrance, I think of your presence in my life. You make my world brighter just by being in it.
+<br><br>
+I promise to protect our love like a rose garden — with care, patience, and devotion.
+<br><br>
+Forever yours, ❤️
+</div>
+<button class="nav-btn" onclick="showPage('page6')">A Message of Sorry 🙏</button>
+</section>
+
+<!-- PAGE 6 : APOLOGY -->
+<section id="page6">
+<h2>Apology from Your Darling 🙏</h2>
+<div class="box">
+<strong>My Motu,</strong><br><br>
+If I ever hurt you — intentionally or unintentionally — I am truly sorry. Sometimes I speak without thinking, sometimes I don’t understand your feelings properly, but my love for you is always pure.
+<br><br>
+I never want to be the reason for your sadness. I want to be your comfort, your peace, and your safe place.
+<br><br>
+Please forgive me. I promise to be better, kinder, and more understanding.
+<br><br>
+With all my love, ❤️
+</div>
+<button class="nav-btn" onclick="showPage('page7')">Final Surprise 🌹</button>
+</section>
+
+<!-- PAGE 7 : FINAL SURPRISE -->
+<section id="page7">
+<h2>For You, Darling 🌹</h2>
+<div class="box center">
+You are my favorite chapter, my favorite story, and my favorite person.
+<br><br>
+If I had to choose between breathing and loving you, I would use my last breath to say —
+<br><br>
+<strong>I LOVE YOU, ALWAYS AND FOREVER.</strong> 💖
+</div>
+<button class="nav-btn" onclick="showPage('page1')">Restart Our Journey 💕</button>
+</section>
+
+<footer>Made with pure love for you on Rose Day 🌹</footer>
+
+<script>
+const petalImages=[
+'https://cdn-icons-png.flaticon.com/512/833/833472.png',
+'https://cdn-icons-png.flaticon.com/512/833/833470.png',
+'https://cdn-icons-png.flaticon.com/512/833/833473.png'];
+function createPetal(){const p=document.createElement('img');p.src=petalImages[Math.floor(Math.random()*petalImages.length)];
+p.className='petal';p.style.left=Math.random()*100+'vw';p.style.animationDuration=5+Math.random()*5+'s';
+p.style.width=18+Math.random()*12+'px';document.getElementById('petals').appendChild(p);
+setTimeout(()=>p.remove(),8000);} setInterval(createPetal,300);
+
+function showPage(id){document.querySelectorAll('section').forEach(s=>s.classList.remove('active'));
+document.getElementById(id).classList.add('active');}
+</script>
+</body>
+</html>
